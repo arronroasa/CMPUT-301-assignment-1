@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">EmotiLog2</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label" />
+    <string name="second_fragment_label" />
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="happy_text">Happy</string>
+    <string name="sad_text">Sad</string>
+    <string name="grateful_text">Grateful</string>
+    <string name="angry_text">Angry</string>
+    <string name="excited_text">Excited</string>
+    <string name="scared_text">Scared</string>
+    <string name="emotions_header">\n\n  How Do You Feel?</string>
+    <string name="summary_header">\n\n Statistics</string>
+    <string name="navigate_summary_text"><![CDATA[>]]></string>
+    <string name="navigate_main_text"><![CDATA[<]]></string>
+    <string name="logs_text">Logs</string>
+    <string name="summary_text">Summary</string>
+</resources>

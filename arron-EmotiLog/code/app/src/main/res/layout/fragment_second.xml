@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/header_summary"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:background="#664FA3"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:text="@string/summary_header"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- The following XML is from Google, Gemini 3, "Can I have two tabs that I switch between on the summary fragment?", 2026-02-04 -->
+
+    <Button
+        android:id="@+id/navigate_main"
+        android:layout_width="58dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#4D3C7A"
+        android:text="@string/navigate_main_text"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header_summary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header_summary"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7E68B8"
+        app:layout_constraintTop_toBottomOf="@id/header_summary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tabTextColor="@android:color/white"
+        app:tabSelectedTextColor="@android:color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logs_text" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/summary_text" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <ListView
+        android:id="@+id/listview_logs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
